@@ -1,4 +1,9 @@
 <html t:type="layout" title="Create/Edit contact"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
+      
+      <p>
+		  <t:beaneditform object="contact" submitlabel="submit"
+		  reorder="firstName,lastName,telephone"/>
+      </p>
 </html>

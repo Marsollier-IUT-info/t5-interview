@@ -1,0 +1,166 @@
+EXCEPTION STACK:
+
+
+  Exception: org.apache.tapestry5.ioc.internal.OperationException
+    Message: Failure creating embedded component 'contact' of com.talentroc.t5.interview.pages.contact.ContactEdit: You must specify the type via t:type, the element, or @Component annotation.
+   location: classpath:com/talentroc/t5/interview/pages/contact/ContactEdit.tml, line 6
+      trace: Handling page render request for page contact/Edit
+             Constructing instance of page class com.talentroc.t5.interview.pages.contact.ContactEdit
+             Creating ComponentAssembler for com.talentroc.t5.interview.pages.contact.ContactEdit
+
+  Exception: org.apache.tapestry5.ioc.internal.util.TapestryException
+    Message: Failure creating embedded component 'contact' of com.talentroc.t5.interview.pages.contact.ContactEdit: You must specify the type via t:type, the element, or @Component annotation.
+   location: classpath:com/talentroc/t5/interview/pages/contact/ContactEdit.tml, line 6
+
+  Exception: org.apache.tapestry5.ioc.internal.util.TapestryException
+    Message: You must specify the type via t:type, the element, or @Component annotation.
+   location: classpath:com/talentroc/t5/interview/pages/contact/ContactEdit.tml, line 6
+
+  Stack trace:
+
+  - org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl.createEmbeddedAssembler(ComponentAssemblerImpl.java:292)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.startComponent(PageLoaderImpl.java:761)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.component(PageLoaderImpl.java:637)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.processTemplateToken(PageLoaderImpl.java:460)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.element(PageLoaderImpl.java:695)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.processTemplateToken(PageLoaderImpl.java:455)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.component(PageLoaderImpl.java:658)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.processTemplateToken(PageLoaderImpl.java:460)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.programAssembler(PageLoaderImpl.java:296)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.access$1000(PageLoaderImpl.java:64)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl$4.invoke(PageLoaderImpl.java:268)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl$4.invoke(PageLoaderImpl.java:251)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1258)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.createAssembler(PageLoaderImpl.java:250)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.getAssembler(PageLoaderImpl.java:240)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl$3.invoke(PageLoaderImpl.java:195)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl$3.invoke(PageLoaderImpl.java:190)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1258)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.loadPage(PageLoaderImpl.java:189)
+  - $PageLoader_77edf1ce8ae.loadPage(Unknown Source)
+  - org.apache.tapestry5.internal.services.PageSourceImpl.getPage(PageSourceImpl.java:104)
+  - $PageSource_77edf1ce8ad.getPage(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestPageCacheImpl.get(RequestPageCacheImpl.java:86)
+  - $RequestPageCache_77edf1ce8ac.get(Unknown Source)
+  - $RequestPageCache_77edf1ce89d.get(Unknown Source)
+  - org.apache.tapestry5.internal.services.PageRenderRequestHandlerImpl.handle(PageRenderRequestHandlerImpl.java:56)
+  - org.apache.tapestry5.modules.TapestryModule$34.handle(TapestryModule.java:1974)
+  - $PageRenderRequestHandler_77edf1ce8a1.handle(Unknown Source)
+  - $PageRenderRequestHandler_77edf1ce89b.handle(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentRequestHandlerTerminator.handlePageRender(ComponentRequestHandlerTerminator.java:48)
+  - org.apache.tapestry5.internal.services.DeferredResponseRenderer.handlePageRender(DeferredResponseRenderer.java:52)
+  - $ComponentRequestHandler_77edf1ce89c.handlePageRender(Unknown Source)
+  - org.apache.tapestry5.services.InitializeActivePageName.handlePageRender(InitializeActivePageName.java:47)
+  - $ComponentRequestHandler_77edf1ce89c.handlePageRender(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$2.run(RequestOperationTracker.java:73)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.run(OperationTrackerImpl.java:56)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.run(PerThreadOperationTracker.java:60)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.run(RegistryImpl.java:1252)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker.handlePageRender(RequestOperationTracker.java:66)
+  - $ComponentRequestHandler_77edf1ce89c.handlePageRender(Unknown Source)
+  - $ComponentRequestHandler_77edf1ce86b.handlePageRender(Unknown Source)
+  - org.apache.tapestry5.internal.services.PageRenderDispatcher.dispatch(PageRenderDispatcher.java:55)
+  - $Dispatcher_77edf1ce86e.dispatch(Unknown Source)
+  - $Dispatcher_77edf1ce865.dispatch(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$RequestHandlerTerminator.service(TapestryModule.java:305)
+  - org.apache.tapestry5.internal.services.RequestErrorFilter.service(RequestErrorFilter.java:26)
+  - $RequestHandler_77edf1ce866.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$3.service(TapestryModule.java:845)
+  - $RequestHandler_77edf1ce866.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$2.service(TapestryModule.java:835)
+  - $RequestHandler_77edf1ce866.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.StaticFilesFilter.service(StaticFilesFilter.java:89)
+  - $RequestHandler_77edf1ce866.service(Unknown Source)
+  - com.talentroc.t5.interview.services.AppModule$1.service(AppModule.java:85)
+  - $RequestFilter_77edf1ce861.service(Unknown Source)
+  - $RequestHandler_77edf1ce866.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:105)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:95)
+  - org.apache.tapestry5.ioc.internal.util.ConcurrentBarrier.withRead(ConcurrentBarrier.java:85)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter.service(CheckForUpdatesFilter.java:119)
+  - $RequestHandler_77edf1ce866.service(Unknown Source)
+  - $RequestHandler_77edf1ce85b.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$HttpServletRequestHandlerTerminator.service(TapestryModule.java:256)
+  - org.apache.tapestry5.internal.gzip.GZipFilter.service(GZipFilter.java:59)
+  - $HttpServletRequestHandler_77edf1ce85d.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.IgnoredPathsFilter.service(IgnoredPathsFilter.java:62)
+  - $HttpServletRequestFilter_77edf1ce859.service(Unknown Source)
+  - $HttpServletRequestHandler_77edf1ce85d.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$1.service(TapestryModule.java:795)
+  - $HttpServletRequestHandler_77edf1ce85d.service(Unknown Source)
+  - $HttpServletRequestHandler_77edf1ce858.service(Unknown Source)
+  - org.apache.tapestry5.TapestryFilter.doFilter(TapestryFilter.java:168)
+  - org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1148)
+  - org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:387)
+  - org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+  - org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+  - org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+  - org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417)
+  - org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+  - org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+  - org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+  - org.mortbay.jetty.Server.handle(Server.java:324)
+  - org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:535)
+  - org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:865)
+  - org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:539)
+  - org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+  - org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+  - org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+  - org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:520)
+
+REQUEST:
+
+Basic Information:
+
+      contextPath: /t5-interview
+            flags: requestedSessionIdValid
+           method: GET
+             path: /contact/edit
+           locale: fr_FR
+       serverName: localhost
+       remoteHost: 127.0.0.1
+
+Headers:
+
+           Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  Accept-Encoding: gzip, deflate, sdch
+  Accept-Language: fr-FR,fr;q=0.8,en-US;q=0.6,en;q=0.4
+       Connection: keep-alive
+           Cookie: JSESSIONID=ix4fzv2e78j
+             Host: localhost:8080
+          Referer: http://localhost:8080/t5-interview/contact
+       User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36
+
+SESSION:
+
+  state:contact/Index:grid:defaultPaginationModel: GridPaginationModelImpl[currentPage=null, sortColumnId=null, sortAscending=null]
+
+SYSTEM INFORMATION:
+
+Memory:
+      227 717 176 bytes free
+      333 447 168 bytes total
+      477 626 368 bytes max
+
+17 Threads:
+                                                                              Reference Handler WAITING, daemon, priority 10
+                                                                                      Finalizer WAITING, daemon, priority 8
+                                                                              Signal Dispatcher RUNNABLE, daemon, priority 9
+                                                                                Attach Listener RUNNABLE, daemon
+                                                                                           main WAITING
+                                                                     1004009692@qtp-454160179-0 TIMED_WAITING
+                      791408866@qtp-454160179-1 - Acceptor0 SelectChannelConnector@0.0.0.0:8080 RUNNABLE
+                                                                                        Timer-0 TIMED_WAITING, daemon
+   C3P0PooledConnectionPoolManager[identityToken->2z84jp98zrvg41a7n5vs|235d659c]-AdminTaskTimer TIMED_WAITING, daemon
+  C3P0PooledConnectionPoolManager[identityToken->2z84jp98zrvg41a7n5vs|235d659c]-HelperThread-#0 TIMED_WAITING, daemon
+  C3P0PooledConnectionPoolManager[identityToken->2z84jp98zrvg41a7n5vs|235d659c]-HelperThread-#1 TIMED_WAITING, daemon
+  C3P0PooledConnectionPoolManager[identityToken->2z84jp98zrvg41a7n5vs|235d659c]-HelperThread-#2 TIMED_WAITING, daemon
+                                                                     1597256953@qtp-454160179-3 TIMED_WAITING
+                                                                      208913231@qtp-454160179-4 TIMED_WAITING
+                                                                     1425123605@qtp-454160179-5 TIMED_WAITING
+                                                                      847983331@qtp-454160179-6 TIMED_WAITING
+*                                                                     889372753@qtp-454160179-7 RUNNABLE

@@ -50,6 +50,9 @@ public class AppModule {
         // FactoryDefaults (with the same key).
         configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en");
         configuration.add(SymbolConstants.JAVASCRIPT_INFRASTRUCTURE_PROVIDER, "jquery");
+        
+        /** HMAC passphrase set, with a random string of characters. */
+        configuration.add(SymbolConstants.HMAC_PASSPHRASE, "T4yv7NHIGSvx5Bn4Bohzb3aN0CuKhh");
     }
 
 

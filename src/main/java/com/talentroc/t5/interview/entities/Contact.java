@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+
+import org.apache.tapestry5.beaneditor.NonVisual;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -17,6 +20,7 @@ public class Contact implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @NonVisual
     private Long id;
 
     @Column(length = 50)
