@@ -1,0 +1,233 @@
+EXCEPTION STACK:
+
+
+        Exception: org.apache.tapestry5.runtime.ComponentEventException
+          Message: org.hibernate.exception.DataException: could not execute statement
+          context: org.apache.tapestry5.internal.EmptyEventContext@12407c8d
+        eventType: action
+         location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+
+        Exception: org.apache.tapestry5.ioc.internal.OperationException
+          Message: org.hibernate.exception.DataException: could not execute statement
+         location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+            trace: Handling traditional 'action' component event request for contact/Edit:beaneditform.form.
+                   Triggering event 'action' on contact/Edit:beaneditform.form
+                   Triggering event 'success' on contact/Edit:beaneditform.form
+
+        Exception: org.apache.tapestry5.runtime.ComponentEventException
+          Message: org.hibernate.exception.DataException: could not execute statement
+          context: org.apache.tapestry5.internal.EmptyEventContext@12407c8d
+        eventType: success
+         location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+
+        Exception: javax.persistence.PersistenceException
+          Message: org.hibernate.exception.DataException: could not execute statement
+
+        Exception: org.hibernate.exception.DataException
+          Message: could not execute statement
+              SQL: n/a
+         SQLState: 22001
+        errorCode: 3401
+
+        Exception: java.sql.SQLDataException
+          Message: data exception: string data, right truncation;  table: CONTACT column: FIRST_NAME
+         SQLState: 22001
+        errorCode: 3401
+
+        Exception: org.hsqldb.HsqlException
+          Message: data exception: string data, right truncation;  table: CONTACT column: FIRST_NAME
+         SQLState: 22001
+        errorCode: 3401
+            level: 0
+  noDataCondition: org.hsqldb.HsqlException: no data
+    statementCode: 50
+
+        Exception: org.hsqldb.HsqlException
+          Message: data exception: string data, right truncation
+         SQLState: 22001
+        errorCode: -3401
+            level: 0
+    statementCode: 0
+
+        Exception: org.hsqldb.HsqlException
+          Message: no data
+         SQLState: 02000
+        errorCode: -1100
+            level: 0
+    statementCode: 0
+
+  Stack trace:
+
+  - org.hsqldb.error.Error.error(Unknown Source)
+  - org.hsqldb.error.Error.error(Unknown Source)
+  - org.hsqldb.HsqlException.<clinit>(Unknown Source)
+  - org.hsqldb.error.Error.error(Unknown Source)
+  - org.hsqldb.error.Error.error(Unknown Source)
+  - org.hsqldb.error.Error.runtimeError(Unknown Source)
+  - org.hsqldb.types.Type.getType(Unknown Source)
+  - org.hsqldb.types.Type.getDefaultType(Unknown Source)
+  - org.hsqldb.dbinfo.DatabaseInformationMain.SYSTEM_TYPEINFO(Unknown Source)
+  - org.hsqldb.dbinfo.DatabaseInformationMain.generateTable(Unknown Source)
+  - org.hsqldb.dbinfo.DatabaseInformationFull.generateTable(Unknown Source)
+  - org.hsqldb.dbinfo.DatabaseInformationMain.setStore(Unknown Source)
+  - org.hsqldb.persist.PersistentStoreCollectionSession.getStore(Unknown Source)
+  - org.hsqldb.Table.getRowStore(Unknown Source)
+  - org.hsqldb.RangeVariable$RangeIteratorMain.<init>(Unknown Source)
+  - org.hsqldb.RangeVariable$RangeIteratorMain.<init>(Unknown Source)
+  - org.hsqldb.RangeVariable.getIterator(Unknown Source)
+  - org.hsqldb.QuerySpecification.buildResult(Unknown Source)
+  - org.hsqldb.QuerySpecification.getSingleResult(Unknown Source)
+  - org.hsqldb.QuerySpecification.getResult(Unknown Source)
+  - org.hsqldb.StatementQuery.getResult(Unknown Source)
+  - org.hsqldb.StatementDMQL.execute(Unknown Source)
+  - org.hsqldb.Session.executeCompiledStatement(Unknown Source)
+  - org.hsqldb.Session.executeDirectStatement(Unknown Source)
+  - org.hsqldb.Session.execute(Unknown Source)
+  - org.hsqldb.jdbc.JDBCStatement.fetchResult(Unknown Source)
+  - org.hsqldb.jdbc.JDBCStatement.executeQuery(Unknown Source)
+  - org.hsqldb.jdbc.JDBCDatabaseMetaData.execute(Unknown Source)
+  - org.hsqldb.jdbc.JDBCDatabaseMetaData.executeSelect(Unknown Source)
+  - org.hsqldb.jdbc.JDBCDatabaseMetaData.getTypeInfo(Unknown Source)
+  - com.mchange.v2.c3p0.impl.NewProxyDatabaseMetaData.getTypeInfo(NewProxyDatabaseMetaData.java:1615)
+  - org.hibernate.engine.jdbc.spi.TypeInfo.extractTypeInfo(TypeInfo.java:101)
+  - org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:163)
+  - org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+  - org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+  - org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+  - org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1885)
+  - org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1843)
+  - org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+  - org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:843)
+  - org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:398)
+  - org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:842)
+  - org.hibernate.jpa.HibernatePersistenceProvider.createContainerEntityManagerFactory(HibernatePersistenceProvider.java:152)
+  - org.apache.tapestry5.internal.jpa.EntityManagerSourceImpl.createEntityManagerFactory(EntityManagerSourceImpl.java:212)
+  - org.apache.tapestry5.internal.jpa.EntityManagerSourceImpl.getEntityManagerFactory(EntityManagerSourceImpl.java:189)
+  - org.apache.tapestry5.internal.jpa.EntityManagerSourceImpl.create(EntityManagerSourceImpl.java:281)
+  - $EntityManagerSource_724f7493e51.create(Unknown Source)
+  - org.apache.tapestry5.internal.jpa.EntityManagerManagerImpl.getOrCreateEntityManager(EntityManagerManagerImpl.java:80)
+  - org.apache.tapestry5.internal.jpa.EntityManagerManagerImpl.createAllEntityManagers(EntityManagerManagerImpl.java:70)
+  - org.apache.tapestry5.internal.jpa.EntityManagerManagerImpl.getEntityManagers(EntityManagerManagerImpl.java:61)
+  - $EntityManagerManager_724f7493e48.getEntityManagers(Unknown Source)
+  - $EntityManagerManager_724f7493e4a.advised$getEntityManagers_724f7493e4c(Unknown Source)
+  - $EntityManagerManager_724f7493e4a$Invocation_getEntityManagers_724f7493e4b.proceedToAdvisedMethod(Unknown Source)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:90)
+  - org.apache.tapestry5.internal.jpa.CommitAfterMethodAdvice.advise(CommitAfterMethodAdvice.java:73)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:92)
+  - $EntityManagerManager_724f7493e4a.getEntityManagers(Unknown Source)
+  - $EntityManagerManager_724f7493e47.getEntityManagers(Unknown Source)
+  - org.apache.tapestry5.jpa.modules.JpaModule.startupEarly(JpaModule.java:187)
+  - sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  - sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+  - sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  - java.lang.reflect.Method.invoke(Method.java:606)
+  - org.apache.tapestry5.ioc.internal.StartupDefImpl$1.run(StartupDefImpl.java:70)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.run(OperationTrackerImpl.java:56)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.run(PerThreadOperationTracker.java:60)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.run(RegistryImpl.java:1252)
+  - org.apache.tapestry5.ioc.internal.StartupDefImpl.invoke(StartupDefImpl.java:48)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl$2.run(RegistryImpl.java:229)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.performRegistryStartup(RegistryImpl.java:360)
+  - org.apache.tapestry5.ioc.internal.RegistryWrapper.performRegistryStartup(RegistryWrapper.java:89)
+  - org.apache.tapestry5.TapestryFilter.init(TapestryFilter.java:112)
+  - org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+  - org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+  - org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:653)
+  - org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+  - org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1239)
+  - org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:517)
+  - org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:466)
+  - org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:124)
+  - org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+  - org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+  - org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+  - org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+  - org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+  - org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+  - org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+  - org.mortbay.jetty.Server.doStart(Server.java:222)
+  - org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+  - org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+  - org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:441)
+  - org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:383)
+  - org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:210)
+  - org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+  - org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
+  - org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+  - org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+  - org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+  - org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+  - org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+  - org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+  - org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+  - org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+  - org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+  - org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+  - org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+  - org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+  - sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  - sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+  - sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  - java.lang.reflect.Method.invoke(Method.java:606)
+  - org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+  - org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+  - org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+  - org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+
+REQUEST:
+
+Basic Information:
+
+      contextPath: /t5-interview
+            flags: requestedSessionIdValid
+           method: POST
+             path: /contact/edit.beaneditform.form
+           locale: fr
+       serverName: localhost
+       remoteHost: 127.0.0.1
+
+Headers:
+
+           Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+  Accept-Encoding: gzip, deflate
+  Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+       Connection: keep-alive
+   Content-Length: 781
+     Content-Type: application/x-www-form-urlencoded
+           Cookie: JSESSIONID=425m5a9mf28g
+              DNT: 1
+             Host: localhost:8080
+          Referer: http://localhost:8080/t5-interview/contact/edit
+       User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:36.0) Gecko/20100101 Firefox/36.0
+
+Parameters:
+        firstName: 123456789012345678901234567890123456789012345678901
+         lastName: 
+       t:formdata: 7x5CXA9jmab0jkkTfCuWpbczEWM=:H4sIAAAAAAAAAFvzloG1XJlBITk/ryQxuUTfNSWzxCopNTEvFchIyy/K1QMx8osYiosYrPKL0vUSCxKTM1L1ShILUotLiipN9ZLzi1JzMpOAdG5Bfl5qXkmxnhNQvytYm0pAUWpBYlFquIAf9+qKbZJMDAwVBeUaDKqE7NPLyc8vAFmqR6ylPkANKkafCtI03cVW29PaIuMDGi0exl/WMkAsMmLQJ2hRQVF+QWpRSSUiQN2JtTIAqhUaqMGpJaUFrnllmUX5eblABV6CTIX3jfV1mRgYfRg4YPaUMAj5ZCWWJernJOal6weXFGXmpVtXFJQwcKZlFhWX+CXmpparMCiCrNNHtsApJz85u9iqJLWiJC0zNScF5FJTvC5NSixO1XNMAgoCA8ANpAfiRNXQw9wPRY//AbuLGxRARfk5IHsLGeoY2Ml0iiOpTgEamJxaXBxcmpSbWVycmZ93eF2KSdq3eecoiTpPMqPOOQdoPErk5Ybtq1XwEP9N6xRrQmbWAMUVK1mhBNLJVsLAkZNIUhSDtHGRrA2ki48cZ4I0CpAWHEJ0DD3OktSc1IIMYEySFnyk6qNv+BFZ47iSUeNg5rB4X6/Ok7GfO8AJHwAA4hp78QYAAA==
+        telephone: 
+
+SESSION:
+
+  state:contact/Index:grid:defaultPaginationModel: GridPaginationModelImpl[currentPage=null, sortColumnId=null, sortAscending=null]
+
+SYSTEM INFORMATION:
+
+Memory:
+       46 626 880 bytes free
+      233 832 448 bytes total
+      559 415 296 bytes max
+
+13 Threads:
+                                                                              Reference Handler WAITING, daemon, priority 10
+                                                                                      Finalizer WAITING, daemon, priority 8
+                                                                              Signal Dispatcher RUNNABLE, daemon, priority 9
+                                                                                Attach Listener RUNNABLE, daemon
+                                                                                           main WAITING
+*                                                                    1925305384@qtp-889421300-0 RUNNABLE
+                     1527911699@qtp-889421300-1 - Acceptor0 SelectChannelConnector@0.0.0.0:8080 RUNNABLE
+                                                                                        Timer-0 TIMED_WAITING, daemon
+   C3P0PooledConnectionPoolManager[identityToken->2z84jp9846833b1hxnq5j|86d5363]-AdminTaskTimer TIMED_WAITING, daemon
+  C3P0PooledConnectionPoolManager[identityToken->2z84jp9846833b1hxnq5j|86d5363]-HelperThread-#0 TIMED_WAITING, daemon
+  C3P0PooledConnectionPoolManager[identityToken->2z84jp9846833b1hxnq5j|86d5363]-HelperThread-#1 TIMED_WAITING, daemon
+  C3P0PooledConnectionPoolManager[identityToken->2z84jp9846833b1hxnq5j|86d5363]-HelperThread-#2 TIMED_WAITING, daemon
+                                                                     1162186776@qtp-889421300-3 TIMED_WAITING

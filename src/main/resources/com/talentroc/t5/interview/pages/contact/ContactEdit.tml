@@ -1,9 +1,13 @@
 <html t:type="layout" title="Create/Edit contact"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-      xmlns:p="tapestry:parameter">
-      
-      <p>
-		  <t:beaneditform object="contact" submitlabel="submit"
-		  reorder="firstName,lastName,telephone"/>
-      </p>
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<p>
+		<!--
+			- "beaneditform"+[...] : Create a new premade form (from the object "contact") in order to create a new contact, directly added to the contact manager.
+			- "reorder"+[...] : Elements displayed in the wanted order.
+		-->
+		<t:beaneditform object="contact" submitlabel="submit"
+		reorder="firstName,lastName,telephone"/>
+	</p>
 </html>
