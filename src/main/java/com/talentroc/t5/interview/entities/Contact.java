@@ -24,14 +24,20 @@ public class Contact implements Serializable {
     /** Hide the id element for the contact edition form ("contactEdit.tml"). */
     @NonVisual
     private Long id;
-
+    
     @Column(length = 50)
+    /** Client input check for the first name (maximum length : 50). */
+    @Validate("maxLength=50")
     private String firstName;
 
     @Column(length = 50)
+    /** Client input check for the last name (required field, minimum length : 3, maximum length : 50). */
+    @Validate("required,minLength=3,maxLength=50")
     private String lastName;
 
     @Column(length = 10)
+    /** Client input check for the telephone number (required field, only digits, compulsory length : 10). */
+    @Validate("required,regexp=\\d{10},minLength=10,maxLength=10")
     private String telephone;
 
     public Contact() {
