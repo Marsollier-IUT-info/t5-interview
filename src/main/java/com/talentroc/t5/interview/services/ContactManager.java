@@ -3,7 +3,6 @@ package com.talentroc.t5.interview.services;
 import com.talentroc.t5.interview.entities.Contact;
 import com.talentroc.t5.interview.utils.BusinessException;
 
-import java.util.Collection;
 import java.util.List;
 
 public interface ContactManager {

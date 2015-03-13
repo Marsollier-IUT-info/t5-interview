@@ -8,6 +8,15 @@
 			- "reorder"+[...] : Elements displayed in the wanted order.
 		-->
 		<t:beaneditform object="contact" submitlabel="submit"
-		reorder="firstName,lastName,telephone"/>
+			reorder="firstName,lastName,telephone">
+			
+			<!--
+				Hide the contact id value to the form.
+			-->
+			<p:id>
+				<t:hidden value="contact.id"/>
+			</p:id>
+			
+		</t:beaneditform>
 	</p>
 </html>

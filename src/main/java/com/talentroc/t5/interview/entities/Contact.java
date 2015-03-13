@@ -8,12 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
-import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
 import java.io.Serializable;
 import java.util.Objects;
 
+@SuppressWarnings("serial")
 @Entity
 @NamedQueries({@NamedQuery(name = Contact.RETRIEVE_ALL, query = "SELECT c FROM Contact c")})
 public class Contact implements Serializable {
@@ -21,8 +21,6 @@ public class Contact implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    /** Hide the id element for the contact edition form ("contactEdit.tml"). */
-    @NonVisual
     private Long id;
     
     @Column(length = 50)

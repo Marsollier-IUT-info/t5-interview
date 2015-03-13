@@ -2,9 +2,11 @@ package com.talentroc.t5.interview.services;
 
 import com.talentroc.t5.interview.entities.Contact;
 import com.talentroc.t5.interview.utils.BusinessException;
+
 import org.apache.tapestry5.jpa.annotations.CommitAfter;
 
 import javax.persistence.EntityManager;
+
 import java.util.List;
 
 public class ContactManagerImpl implements ContactManager {
@@ -103,7 +105,8 @@ public class ContactManagerImpl implements ContactManager {
         entityManager.remove(contact);
     }
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public List<Contact> retrieveAll() {
         return entityManager.createNamedQuery(Contact.RETRIEVE_ALL).getResultList();
     }

@@ -9,8 +9,8 @@ import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
-public class ContactEdit {
-
+public class ContactEdit
+{
     @Property
     private Contact contact;
     
@@ -22,8 +22,9 @@ public class ContactEdit {
     @Inject
     private ContactManager contactManager;
     
-    void onActivate() {
-        contact = new Contact();
+    void onActivate()
+    {
+        contact=new Contact();
     }
 
     Boolean onActivate(Contact contact) {
@@ -31,16 +32,24 @@ public class ContactEdit {
         return Boolean.TRUE;
     }
     
-    /** On submit. */
+    /** On submit.
+     * The new contact is created in the contact manager,
+     * or updated if already existing. */
     Object onSuccess()
     {
-		/** The new contact is created in the contact manager. */
 		try{
-			contactManager.create(contact);
+			if(contact.getId()==null)
+			{
+				contactManager.create(contact);
+			}
+			else
+			{
+				contactManager.update(contact);
+			}
 		}
-		catch(BusinessException e)
+		catch(BusinessException businessException)
 		{
-			e.printStackTrace();
+			businessException.printStackTrace();
 		}
 		
 		/** The contacts index page is finally returned. */

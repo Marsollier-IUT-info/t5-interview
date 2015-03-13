@@ -1,7 +1,18 @@
 <html t:type="layout" title="Contact"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-        >
-<t:pagelink page="contact/contactedit" class="btn btn-default">Create a contact</t:pagelink>
-<p>&nbsp;</p>
-<t:grid source="contacts" row="contact" exclude="id"></t:grid>
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<t:pagelink page="contact/contactedit" class="btn btn-default">Create a contact</t:pagelink>
+	<p>&nbsp;</p>
+	<t:grid source="contacts" row="contact" exclude="id" add="edit,remove">
+		
+		<p:editCell>
+			<t:pagelink t:page="contact/ContactEdit" t:context="contact">Edit</t:pagelink>
+		</p:editCell>
+		
+		<p:removeCell>
+			<t:actionlink t:id="remove" t:context="contact">Remove</t:actionlink>
+		</p:removeCell>
+		
+	</t:grid>
 </html>
